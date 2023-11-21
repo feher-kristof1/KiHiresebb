@@ -1,0 +1,13 @@
+.hellotext{
+    text-align: center;
+    margin: 100px auto;
+}
+
+p.hellotext{
+    font-size: larger;
+}
+
+.modvalasztogomb{
+    margin: 50px auto;
+    text-align: center;
+}
