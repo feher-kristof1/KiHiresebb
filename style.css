@@ -1,10 +1,21 @@
+body{
+    width: 50%;
+    background-color: rgb(217, 217, 217);
+    margin: 0 auto;
+}
+
 .hellotext{
     text-align: center;
-    margin: 100px auto;
+    width: 350px;
+    margin: 200px auto 10px;
+    border: 3px solid rgb(160, 15, 15);
+    border-radius: 20px;
 }
 
 p.hellotext{
     font-size: larger;
+    margin-top: 15px;
+    width: 500px;
 }
 
 .modvalasztogomb{
