@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Ki a híresebb?</title>
 </head>
 <body>
     <h1 class="hellotext">Ki a híresebb?</h1>
-    <p class="hellotext">A játék elindtása után el kell majd döntened melyik híresség rendelkezik több GOOGLE keresési találattal.</p>
-    <div class="modvalasztogomb">
-        <input type="button" name="casual" value="Casual" class="valosztogomb">
-        <input type="button" name="nits" value="Nits mód" class="valosztogomb">
+    <div class="kezdokepernyo">
+        <p class="hellotext">A játék elindtása után el kell majd döntened melyik híresség rendelkezik több GOOGLE keresési találattal.</p>
+        <div class="modvalasztogomb">
+            <input type="button" name="casual" value="Casual" class="valosztogomb" onclick="jatekKezdC()">
+            <input type="button" name="jedlik" value="Jedlik mód" class="valosztogomb" onclick="jatekKezdJ()">
+        </div>
     </div>
+    <div class="classik">
+        <div class="kepek">
+
+        </div>
+        <div class="gombok" style="display: none;">
+            <div id="szamcsikb" class="szamcsik">
+                <p class="csikszam" id="csikszamb"></p>
+                <input type="button" name="elso" value="Elso" id="balgomb" class="ingameGomb">
+            </div>
+            <div id="szamcsikj" class="szamcsik">
+                <p class="csikszam" id="csikszamj"></p>
+                <input type="button" name="masodik" value="Masodik" id="jobbgomb" class="ingameGomb">
+            </div> 
+        </div>
+    </div>
+    <input type="button" name="elso" value="Újrakezdés" id="resigomb" onclick="ujrakezd()">
 </body>
 </html>
