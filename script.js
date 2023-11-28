@@ -18,12 +18,15 @@ function jatekKezdC(){
     if(kinekNagyobb(emberszam1,emberszam2)==1){
         document.querySelector("#szamcsikb").style.height="400px";
         document.querySelector("#szamcsikj").style.height="300px";
+        document.querySelector("#szamcsikj").style.backgroundColor="red";
         document.querySelector("#csikszamb").innerHTML=emberszam1;
         document.querySelector("#csikszamj").innerHTML=emberszam2;
     }
+    else if(kinekNagyobb(emberszam1,emberszam2)==2) document.querySelector("#eredmenyszoveg").innerHTML="A két személy megegyezik.";
     else{
         document.querySelector("#szamcsikb").style.height="300px";
         document.querySelector("#szamcsikj").style.height="400px";
+        document.querySelector("#szamcsikb").style.backgroundColor="red";
         document.querySelector("#csikszamb").innerHTML=emberszam1;
         document.querySelector("#csikszamj").innerHTML=emberszam2;
     }
@@ -50,6 +53,7 @@ function jatekKezdJ(){
 
 function kinekNagyobb(szam1,szam2){
     if(szam1>szam2) return 1;
+    else if(szam1==szam2) return 2;
     else return 0;
 }
 
