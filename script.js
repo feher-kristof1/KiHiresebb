@@ -35,7 +35,13 @@ function jatekKezdC(){
         document.querySelector("#csikszamj").innerHTML=emberszam2;
         document.querySelector("#eredmenyszoveg").innerHTML="";
     }
-    else if(kinekNagyobb(emberszam1,emberszam2)==2) document.querySelector("#eredmenyszoveg").innerHTML="A két személy megegyezik.";
+    else if(kinekNagyobb(emberszam1,emberszam2)==2){ 
+        document.querySelector("#eredmenyszoveg").innerHTML="A két személy megegyezik.";
+        document.querySelector("#szamcsikb").style.height="350px";
+        document.querySelector("#szamcsikj").style.height="350px";
+        document.querySelector("#szamcsikj").style.backgroundColor="grey";
+        document.querySelector("#szamcsikb").style.backgroundColor="grey";
+    }
     else{
         document.querySelector("#szamcsikb").style.height="300px";
         document.querySelector("#szamcsikj").style.height="400px";
@@ -76,4 +82,5 @@ function kinekNagyobb(szam1,szam2){
 function ujrakezd(){
     document.querySelector(".kezdokepernyo").style.display="block";
     document.querySelector(".gombok").style.display="none";
+    document.querySelector("#eredmenyszoveg").innerHTML="";
 }
