@@ -27,20 +27,24 @@ function jatekKezdC(){
     pic1.src = kep1;
     pic1.alt = kivEmber2;
 
-    if(kinekNagyobb(emberszam1,emberszam2)==1){
+    if(emberszam1>emberszam2){
         document.querySelector("#szamcsikb").style.height="400px";
         document.querySelector("#szamcsikj").style.height="300px";
         document.querySelector("#szamcsikj").style.backgroundColor="red";
+        document.querySelector("#szamcsikb").style.backgroundColor="green";
         document.querySelector("#csikszamb").innerHTML=emberszam1;
         document.querySelector("#csikszamj").innerHTML=emberszam2;
+        szoveg.innerHTML="";
     }
-    else if(kinekNagyobb(emberszam1,emberszam2)==2) document.querySelector("#eredmenyszoveg").innerHTML="A két személy megegyezik.";
+    else if(emberszam1==emberszam2) szoveg.innerHTML="A két személy megegyezik.";
     else{
         document.querySelector("#szamcsikb").style.height="300px";
         document.querySelector("#szamcsikj").style.height="400px";
         document.querySelector("#szamcsikb").style.backgroundColor="red";
+        document.querySelector("#szamcsikj").style.backgroundColor="green";
         document.querySelector("#csikszamb").innerHTML=emberszam1;
         document.querySelector("#csikszamj").innerHTML=emberszam2;
+        szoveg.innerHTML="";
     }
 
     document.querySelector("#balgomb").value=kivEmber1;
@@ -62,12 +66,6 @@ function jatekKezdJ(){
     document.querySelector("#jobbgomb").value=kivEmber2;
     document.querySelector(".kezdokepernyo").style.display="none";
     document.querySelector(".gombok").style.display="block";
-}
-
-function kinekNagyobb(szam1,szam2){
-    if(szam1>szam2) return 1;
-    else if(szam1==szam2) return 2;
-    else return 0;
 }
 
 function ujrakezd(){
