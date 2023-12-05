@@ -37,8 +37,8 @@ p.hellotext{
     background-color: green;
     width: 100px;
     display: inline-block;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .csikszam{
@@ -48,4 +48,17 @@ p.hellotext{
 
 #resigomb{
     margin-left: 435px;
+}
+
+.kepp{
+    width: 150px;
+    height: 150px;
+}
+
+#kep-bal{
+    float: left;
+}
+
+#kep-jobb{
+    float: right;
 }
