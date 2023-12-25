@@ -1,13 +1,21 @@
 body{
-    width: 50%;
+    width: 75%;
     background-color: rgb(217, 217, 217);
     margin: 0 auto;
+}
+
+div#szamcsikj{
+    margin-left: 200px;
+}
+
+h2{
+    margin-left:375px;
 }
 
 .hellotext{
     text-align: center;
     width: 350px;
-    margin: 150px auto 10px;
+    margin: 200px auto 10px;
     border: 3px solid rgb(160, 15, 15);
     border-radius: 20px;
     display: block;
@@ -55,10 +63,38 @@ p.hellotext{
     height: 250px;
 }
 
+.kepp :hover{
+    cursor: pointer;
+}
+
 #kep-bal{
     float: left;
 }
 
 #kep-jobb{
     float: right;
+}
+
+#next{
+    margin-left: 425px;
+    text-align: center;
+    width: 200px;
+    margin: 25px auto;
+    border: 5px solid rgb(124, 160, 15);
+    border-radius: 10px;
+    font-size: larger;
+    background-color: rgba(124, 160, 15, 0.65);
+    color: white;
+}
+
+.nevcedula{
+    text-align: center;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 25px;
+    border: 5px solid rgb(15, 15, 160);
+    border-radius: 10px;
+    font-size: larger;
+    background-color: rgba(15, 15, 160, 0.65);
+    color: white;
 }

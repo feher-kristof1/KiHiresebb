@@ -16,23 +16,29 @@
             <input type="button" name="jedlik" value="Jedlik mód" class="valosztogomb" onclick="jatekKezdJ()">
         </div>
     </div>
+    <div id="gameover" style="display: none;">
+        <h1 id="GOText" class="goText">Sajnos már nincs több próbálkozási lehetőséged!</h1>
+        <h2 id="pontszam" class="goText">Végső pontszámod:</h2>
+    </div>
     <div class="classik">
         <div class="kepek">
-
+            <h2 id="elet"></h2>
         </div>
         <div class="gombok" style="display: none;">
             <div id="szamcsikb" class="szamcsik">
                 <p class="csikszam" id="csikszamb"></p>
-                <img src="" alt="" id="kep-bal" class="kepp">
-                <input type="button" name="elso" value="Elso" id="balgomb" class="ingameGomb" onclick="jatekKezdC()">
             </div>
             <div id="szamcsikj" class="szamcsik">
                 <p class="csikszam" id="csikszamj"></p>
-                <img src="" alt="" id="kep-jobb" class="kepp">
-                <input type="button" name="masodik" value="Masodik" id="jobbgomb" class="ingameGomb" onclick="jatekKezdC()">
             </div> 
+                <img src="" alt="" id="kep-bal" class="kepp" onclick="">
+                <img src="" alt="" id="kep-jobb" class="kepp" onclick="">
+                <div class="nevcedula"><label for="kep-bal" id="balgomb" class="ingameGomb"></label></div>
+                <div class="nevcedula"><label for="kep-jobb" id="jobbgomb" class="ingameGomb"></label></div>
+
         </div>
     </div>
+    <h3 id="next" onclick="JatekC()" style="display: none;">Következő kör</h3>
     <input type="button" name="elso" value="Újrakezdés" id="resigomb" onclick="ujrakezd()">
     <h4 id="eredmenyszoveg"></h4>
 </body>

@@ -4,7 +4,9 @@ let kepek = ["kepek/Nits.jfif","kepek/Swift.jfif","kepek/Rock.jfif","kepek/Willi
 let pic = document.querySelector("#kep-bal");
 let pic1 = document.querySelector("#kep-jobb");
 let balgomb = document.querySelector("#balgomb");
-let hibaSzam = 0;
+let csikj = document.querySelector("#szamcsikj");
+let csikb = document.querySelector("#szamcsikb");
+let eletek = 5;
 
 console.log(balgomb);
 
@@ -30,21 +32,65 @@ function jatekKezdC(){
     pic1.src = kep1;
     pic1.alt = kivEmber2;
 
-    if(emberszam1>emberszam2){
+    document.querySelector("#balgomb").innerHTML=kivEmber1;
+    document.querySelector("#jobbgomb").innerHTML=kivEmber2;
+    document.querySelector(".kezdokepernyo").style.display="none";
+    document.querySelector(".gombok").style.display="block";
+    document.querySelector("#next").style.display="block";
+    const timeout = setTimeout(function(){}, 2000);
+    document.querySelector("#elet").innerHTML="Megmaradt életeid:"+eletek;
+    csikb.style.display="none";
+    csikj.style.display="none";
+
+}
+
+function JatekC(){
+    let randomszam1 = Math.floor(Math.random()*emberek.length);
+    let randomszam2 = Math.floor(Math.random()*emberek.length);
+    let kivEmber1 = emberek[randomszam1];
+    let kivEmber2 = emberek[randomszam2];
+    let emberszam1 = talalatszamok[randomszam1];
+    let emberszam2 = talalatszamok[randomszam2]; 
+    let kep = kepek[randomszam1];
+    let kep1 = kepek[randomszam2];
+    console.log("bal"+ emberszam1);
+    console.log("jobb"+ emberszam2);
+
+    pic.src = kep;
+    pic.alt = kivEmber1;
+
+    pic1.src = kep1;
+    pic1.alt = kivEmber2;
+
+    document.querySelector("#balgomb").innerHTML=kivEmber1;
+    document.querySelector("#jobbgomb").innerHTML=kivEmber2;
+    document.querySelector(".kezdokepernyo").style.display="none";
+    document.querySelector(".gombok").style.display="block";
+    document.querySelector("#next").style.display="block";
+    csikb.style.height="0px";
+    csikj.style.height="0px";
+
+    CsikAllit(emberszam1,emberszam2);
+
+    document.querySelector("#elet").innerHTML="Megmaradt életeid:"+eletek;
+}
+
+function CsikAllit(szam1,szam2){
+    if(szam1>szam2){
         document.querySelector("#szamcsikb").style.height="400px";
         document.querySelector("#szamcsikj").style.height="300px";
         document.querySelector("#szamcsikj").style.backgroundColor="red";
         document.querySelector("#szamcsikb").style.backgroundColor="green";
-        document.querySelector("#csikszamb").innerHTML=emberszam1;
-        document.querySelector("#csikszamj").innerHTML=emberszam2;
+        document.querySelector("#csikszamb").innerHTML=szam1;
+        document.querySelector("#csikszamj").innerHTML=szam2;
         document.querySelector("#eredmenyszoveg").innerHTML="";
     }
-    else if(emberszam1==emberszam2){ 
+    else if(szam1==szam2){ 
         document.querySelector("#eredmenyszoveg").innerHTML="A két személy megegyezik.";
         document.querySelector("#szamcsikb").style.height="350px";
         document.querySelector("#szamcsikj").style.height="350px";
-        document.querySelector("#csikszamb").innerHTML=emberszam1;
-        document.querySelector("#csikszamj").innerHTML=emberszam2;
+        document.querySelector("#csikszamb").innerHTML=szam1;
+        document.querySelector("#csikszamj").innerHTML=szam2;
         document.querySelector("#szamcsikj").style.backgroundColor="grey";
         document.querySelector("#szamcsikb").style.backgroundColor="grey";
     }
@@ -53,19 +99,23 @@ function jatekKezdC(){
         document.querySelector("#szamcsikj").style.height="400px";
         document.querySelector("#szamcsikb").style.backgroundColor="red";
         document.querySelector("#szamcsikj").style.backgroundColor="green";
-        document.querySelector("#csikszamb").innerHTML=emberszam1;
-        document.querySelector("#csikszamj").innerHTML=emberszam2;
+        document.querySelector("#csikszamb").innerHTML=szam1;
+        document.querySelector("#csikszamj").innerHTML=szam2;
         document.querySelector("#eredmenyszoveg").innerHTML="";
     }
+}
 
-    document.querySelector("#balgomb").value=kivEmber1;
-    document.querySelector("#jobbgomb").value=kivEmber2;
+if(eletek<=0){
+    document.querySelector("#gameover").style.display="block";
     document.querySelector(".kezdokepernyo").style.display="none";
-    document.querySelector(".gombok").style.display="block";
+    document.querySelector(".gombok").style.display="none";
 }
 
 function ujrakezd(){
     document.querySelector(".kezdokepernyo").style.display="block";
     document.querySelector(".gombok").style.display="none";
     document.querySelector("#eredmenyszoveg").innerHTML="";
+    document.querySelector("#gameover").style.display="none";
+    document.querySelector("#elet").style.display="none";
+    document.querySelector("#next").style.display="none";
 }
