@@ -37,10 +37,13 @@ function jatekKezdC(){
     document.querySelector(".kezdokepernyo").style.display="none";
     document.querySelector(".gombok").style.display="block";
     document.querySelector("#next").style.display="block";
-    const timeout = setTimeout(function(){}, 2000);
     document.querySelector("#elet").innerHTML="Megmaradt életeid:"+eletek;
     csikb.style.display="none";
     csikj.style.display="none";
+    pic.style.display="flex";
+    pic1.style.display="flex";
+
+    CsikAllit(emberszam1,emberszam2);
 
 }
 
@@ -69,8 +72,11 @@ function JatekC(){
     document.querySelector("#next").style.display="block";
     csikb.style.height="0px";
     csikj.style.height="0px";
+    pic.style.display="flex";
+    pic1.style.display="flex";
 
     CsikAllit(emberszam1,emberszam2);
+    document.querySelector("#csikok").style.display="none"
 
     document.querySelector("#elet").innerHTML="Megmaradt életeid:"+eletek;
 }
@@ -103,13 +109,18 @@ function CsikAllit(szam1,szam2){
         document.querySelector("#csikszamj").innerHTML=szam2;
         document.querySelector("#eredmenyszoveg").innerHTML="";
     }
+    console.log(1)
 }
 
-if(eletek<=0){
-    document.querySelector("#gameover").style.display="block";
-    document.querySelector(".kezdokepernyo").style.display="none";
-    document.querySelector(".gombok").style.display="none";
+function csikmutat(){
+    document.querySelector("#csikok").style.display="flex";
+    csikj.style.display="flex";
+    csikb.style.display="flex";
+    csikj.style.marginLeft="300px";
+    csikb.style.marginLeft="300px";
+    console.log(2)
 }
+
 
 function ujrakezd(){
     document.querySelector(".kezdokepernyo").style.display="block";

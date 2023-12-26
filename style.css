@@ -61,6 +61,7 @@ p.hellotext{
 .kepp{
     width: 250px;
     height: 250px;
+    display: none;
 }
 
 .kepp :hover{
@@ -97,4 +98,12 @@ p.hellotext{
     font-size: larger;
     background-color: rgba(15, 15, 160, 0.65);
     color: white;
+}
+
+#resigomb{
+    margin: auto 650px;
+}
+
+#elet{
+    margin: auto 590px;
 }

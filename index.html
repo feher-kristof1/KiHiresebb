@@ -24,17 +24,21 @@
         <div class="kepek">
             <h2 id="elet"></h2>
         </div>
+        <img src="" alt="" id="kep-bal" class="kepp" onclick="csikmutat()">
+        <img src="" alt="" id="kep-jobb" class="kepp" onclick="csikmutat()">
         <div class="gombok" style="display: none;">
-            <div id="szamcsikb" class="szamcsik">
-                <p class="csikszam" id="csikszamb"></p>
+            <div id="csikok">
+                <div id="szamcsikb" class="szamcsik">
+                    <p class="csikszam" id="csikszamb"></p>
+                </div>
+                <div id="szamcsikj" class="szamcsik">
+                    <p class="csikszam" id="csikszamj"></p>
+                </div>
             </div>
-            <div id="szamcsikj" class="szamcsik">
-                <p class="csikszam" id="csikszamj"></p>
-            </div> 
-                <img src="" alt="" id="kep-bal" class="kepp" onclick="">
-                <img src="" alt="" id="kep-jobb" class="kepp" onclick="">
-                <div class="nevcedula"><label for="kep-bal" id="balgomb" class="ingameGomb"></label></div>
-                <div class="nevcedula"><label for="kep-jobb" id="jobbgomb" class="ingameGomb"></label></div>
+                <div id="cedulak">
+                    <div class="nevcedula"><label for="kep-bal" id="balgomb" class="ingameGomb" onclick="csikmutat()"></label></div>
+                    <div class="nevcedula"><label for="kep-jobb" id="jobbgomb" class="ingameGomb" onclick="csikmutat()"></label></div>
+                </div>
 
         </div>
     </div>
