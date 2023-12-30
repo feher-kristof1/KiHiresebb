@@ -9,12 +9,17 @@ div#szamcsikj{
 }
 
 h2{
-    margin-left:375px;
+    margin:auto;
+    margin-bottom: 15px;
+    border: 6px double crimson;
+    background-color: rgba(220, 20, 60, 0.65);
+    width: 250px;
+    text-align: center;
 }
 
 .hellotext{
     text-align: center;
-    width: 350px;
+    width: 400px;
     margin: 200px auto 10px;
     border: 3px solid rgb(160, 15, 15);
     border-radius: 20px;
@@ -32,26 +37,12 @@ p.hellotext{
     text-align: center;
 }
 
-.gombok{
-    margin: 50px auto;
-    text-align: center;
+.valasztogomb{
+    margin: auto;
 }
 
 .ingameGomb{
     margin:auto;
-}
-
-.szamcsik{
-    background-color: green;
-    width: 100px;
-    display: inline-block;
-    margin-left: 100px;
-    margin-right: 135px;
-}
-
-.csikszam{
-    margin-top: 250px;
-    color: aliceblue;
 }
 
 #resigomb{
@@ -64,10 +55,6 @@ p.hellotext{
     display: none;
 }
 
-.kepp :hover{
-    cursor: pointer;
-}
-
 #kep-bal{
     float: left;
 }
@@ -77,10 +64,11 @@ p.hellotext{
 }
 
 #next{
+    height: 35px;
     margin-left: 425px;
     text-align: center;
     width: 200px;
-    margin: 25px auto;
+    margin:auto;
     border: 5px solid rgb(124, 160, 15);
     border-radius: 10px;
     font-size: larger;
@@ -89,10 +77,11 @@ p.hellotext{
 }
 
 .nevcedula{
+    height: 40px;
     text-align: center;
     width: 200px;
     margin: auto;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     border: 5px solid rgb(15, 15, 160);
     border-radius: 10px;
     font-size: larger;
@@ -106,4 +95,38 @@ p.hellotext{
 
 #elet{
     margin: auto 590px;
+}
+
+@keyframes csik{
+    from {width: 0px;}
+    to {width: 1027.5px;}
+}
+
+.csik{
+    height: 25px;
+    text-align: center;
+    width: 1027.5px;
+    margin-left:250px;
+    background-color: rgb(75, 75, 75);
+    border: 5px double rgb(0, 0, 0);
+    color: azure;
+}
+
+.szamok{
+    font-size: larger;
+}
+
+table{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.jatekvege{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 5px dotted rgb(3, 49, 198);
+    background-color: rgba(3, 48, 198, 0.65);
+    border-radius: 35px;
 }
