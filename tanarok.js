@@ -9,6 +9,7 @@ let emberszam1 = 0;
 let emberszam2 = 0; 
 let pik = document.querySelector("#kep-bal");
 let pik1 = document.querySelector("#kep-jobb");
+let pontszam = 0;
 
 function JatekJ(){
     randomszam1 = Math.floor(Math.random()*tanarok.length);
@@ -72,4 +73,21 @@ function kinekNagyobb(szam1,szam2){
 function ujrakezd(){
     document.querySelector(".kezdokepernyo").style.display="block";
     document.querySelector(".gombok").style.display="none";
+}
+function JatekC() {
+    if (parseInt(emberszam1.replace(/\s/g, '')) > parseInt(emberszam2.replace(/\s/g, ''))) {
+        pontszam++;
+        document.querySelector("#eredmenyszoveg").innerHTML = "Helyes válasz! Pontszám: " + pontszam;
+    } else {
+        pontszam--;
+        document.querySelector("#eredmenyszoveg").innerHTML = "Helytelen válasz! Pontszám: " + pontszam;
+    }
+
+
+
+    jatekKezdC();
+}
+
+function megtekintPontszam() {
+    alert("A jelenlegi pontszámod: " + pontszam);
 }
