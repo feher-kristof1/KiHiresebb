@@ -22,8 +22,6 @@ function jatekKezdC(){
     emberszam2 = talaltszamok[randomszam2]; 
     kep = kepeik[randomszam1];
     kep1 = kepeik[randomszam2];
-    console.log("bal " + emberszam1);
-    console.log("jobb "+ emberszam2);
 
     pic.src = kep;
     pic.alt = kivEmber1
