@@ -7,21 +7,21 @@ let kivEmber1 = 0;
 let kivEmber2 = 0;
 let emberszam1 = 0;
 let emberszam2 = 0; 
-let pic = document.querySelector("#kep-bal")
-let pic1 = document.querySelector("#kep-jobb")
+let pik = document.querySelector("#kep-bal");
+let pik1 = document.querySelector("#kep-jobb");
 let pontszam = 0;
 
 function jatekKezdC(){
     randomszam1 = Math.floor(Math.random()*emberek.length);
     randomszam2 = Math.floor(Math.random()*emberek.length);
     
-    if(randomszam1!=randomszam2){
-    kivEmber1 = emberek[randomszam1];
-    kivEmber2 = emberek[randomszam2];
-    emberszam1 = talalatszamok[randomszam1];
-    emberszam2 = talalatszamok[randomszam2]; 
-    kep = kepek[randomszam1];
-    kep1 = kepek[randomszam2];
+    if(randomszam1!=randomszam2){   
+    kivEmber1 = tanarok[randomszam1];
+    kivEmber2 = tanarok[randomszam2];
+    emberszam1 = talaltszamok[randomszam1];
+    emberszam2 = talaltszamok[randomszam2]; 
+    kep = kepeik[randomszam1];
+    kep1 = kepeik[randomszam2];
     console.log("bal " + emberszam1);
     console.log("jobb "+ emberszam2);
 
