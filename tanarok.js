@@ -14,6 +14,8 @@ let pontszam = 0;
 function JatekJ(){
     randomszam1 = Math.floor(Math.random()*tanarok.length);
     randomszam2 = Math.floor(Math.random()*tanarok.length);
+
+    if(randomszam1!=randomszam2){
     kivEmber1 = tanarok[randomszam1];
     kivEmber2 = tanarok[randomszam2];
     emberszam1 = talaltszamok[randomszam1];
@@ -47,6 +49,7 @@ function JatekJ(){
     document.querySelector("#jobbgomb").value=kivEmber2;
     document.querySelector(".kezdokepernyo").style.display="none";
     document.querySelector(".gombok").style.display="block";
+}
 }
 
 function jatekKezdJ(){
