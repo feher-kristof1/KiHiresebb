@@ -130,3 +130,7 @@ table{
     background-color: rgba(3, 48, 198, 0.65);
     border-radius: 35px;
 }
+
+#pont-szam{
+    text-align: center;
+}

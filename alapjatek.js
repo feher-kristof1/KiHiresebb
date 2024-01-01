@@ -7,6 +7,7 @@ let balgomb = document.querySelector("#balgomb");
 let csikb = document.querySelector("#balkep");
 let csikj = document.querySelector("#jobbkep");
 let korok = 1;
+let pontszam = 0;
 
 console.log(balgomb);
 
@@ -132,4 +133,19 @@ function jatekVege(){
     document.querySelector("#next").style.display="none";
     document.querySelector(".kepek").style.display="none";
     document.querySelector("#cedulak").style.display="none";
+}
+
+function JatekC() {
+    if (parseInt(emberszam1.replace(/\s/g, '')) > parseInt(emberszam2.replace(/\s/g, ''))) {
+        pontszam++;
+        document.querySelector("#eredmenyszoveg").innerHTML = "Helyes válasz! Pontszám: " + pontszam;
+    } else {
+        pontszam--;
+        document.querySelector("#eredmenyszoveg").innerHTML = "Helytelen válasz! Pontszám: " + pontszam;
+    }
+    jatekKezdC();
+}
+
+function megtekintPontszam() {
+    alert("A jelenlegi pontszámod: " + pontszam);
 }
