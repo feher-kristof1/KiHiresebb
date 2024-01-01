@@ -15,8 +15,54 @@ let keretb=document.querySelector("#keretbal");
 let keretj=document.querySelector("#keretjobb");
 let keretalso=document.querySelector("#keretalso");
 let korok = 1;
+let pontszam =0;
 
 console.log(balgomb);
+
+function jatekKezdC(){
+    let randomszam1 = Math.floor(Math.random()*emberek.length);
+    let randomszam2 = Math.floor(Math.random()*emberek.length);
+
+    if(randomszam1!=randomszam2){
+        let kivEmber1 = emberek[randomszam1];
+        let kivEmber2 = emberek[randomszam2];
+        let emberszam1 = talalatszamok[randomszam1];
+        let emberszam2 = talalatszamok[randomszam2]; 
+        let kep = kepek[randomszam1];
+        let kep1 = kepek[randomszam2];
+        console.log("bal "+ emberszam1);
+        console.log("jobb "+ emberszam2);
+
+        pic.src = kep;
+        pic.alt = kivEmber1;
+
+        pic1.src = kep1;
+        pic1.alt = kivEmber2;
+
+        document.querySelector("#balgomb").innerHTML=kivEmber1;
+        document.querySelector("#jobbgomb").innerHTML=kivEmber2;
+        document.querySelector(".kezdokepernyo").style.display="none";
+        document.querySelector("#next").style.display="block";
+        document.querySelector("#korszamlalo").innerHTML="Jelenlegi kör: "+korok;
+        document.querySelector(".jatekter").style.display="block";
+        document.querySelector("#cedulak").style.display="block";
+        document.querySelector("#next").style.display="none";
+        pic.style.display="flex";
+        pic1.style.display="flex";
+        document.querySelector(".kepek").style.display="block";
+        document.querySelector("#cedulak").style.display="block";
+        csikb.style.display="none"
+        csikj.style.display="none"
+
+        CsikAllit(emberszam1,emberszam2);
+        korok++;
+        if(korok>11){ 
+            korok=1;
+            jatekVege()
+        }
+    }
+    else randomszam2 = Math.floor(Math.random()*emberek.length);
+}
 
 function JatekC(){
     let randomszam1 = Math.floor(Math.random()*emberek.length);
@@ -37,25 +83,31 @@ function JatekC(){
         pic1.alt = kivEmber2;
         document.querySelector("#balgomb").innerHTML=kivEmber1;
         document.querySelector("#jobbgomb").innerHTML=kivEmber2;
-        document.querySelector("#korszamlalo").innerHTML="Jelenlegi kör: "+korok;
         document.querySelector(".kezdokepernyo").style.display="none";
-        document.querySelector("#next").style.display="none";
+        document.querySelector("#next").style.display="block";
+        document.querySelector("#korszamlalo").innerHTML="Jelenlegi kör: "+korok;
         document.querySelector(".jatekter").style.display="block";
-        document.querySelector("#korszamlalo").style.display="block";
-        document.querySelector(".kepek").style.display="block";
         document.querySelector("#cedulak").style.display="block";
-        
-        csikb.style.display="none";
-        csikj.style.display="none";
+        document.querySelector("#next").style.display="none";
         pic.style.display="flex";
         pic1.style.display="flex";
+        document.querySelector(".kepek").style.display="block";
+        document.querySelector("#cedulak").style.display="block";
+        csikb.style.display="none"
+        csikj.style.display="none"
 
         CsikAllit(emberszam1,emberszam2);
-
         korok++;
         if(korok>11){ 
             korok=1;
             jatekVege()
+        }
+        if (parseInt(emberszam1.replace(/\s/g, '')) > parseInt(emberszam2.replace(/\s/g, ''))) {
+            pontszam++;
+            document.querySelector("#eredmenyszoveg").innerHTML = "Végső pontszámod: " + pontszam;
+        } else {
+            pontszam--;
+            document.querySelector("#eredmenyszoveg").innerHTML = "Végső pontszámod: " + pontszam;
         }
     }
     else randomszam2 = Math.floor(Math.random()*emberek.length);

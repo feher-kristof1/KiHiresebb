@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="alapjatek.js" defer></script>
-    <script src="tanarok.js"></script>
     <title>Ki a híresebb?</title>
 </head>
 <body>
@@ -15,11 +14,12 @@
         <p class="hellotext">10 páros után lesz vége a játéknak, ezt jegyezd meg!</p>
         <p class="hellotext">Ha érdekelnek a pontos számok, a képekre kattintva jelenítheted meg őket.</p>
         <div class="modvalasztogomb">
-            <div id="ingameGomb" onclick="JatekC()"> </div>
+            <div id="ingameGomb" onclick="jatekKezdC()"> </div>
         </div>
     </div>
     <div id="jatek-vege" style="display: none;">
         <h1 class="jatekvege" style="font-size: 75px;">Vége a játéknak, nincs több kör.</h1>
+        <h3 id="eredmenyszoveg"></h3>
     </div>
     <div class="jatekter">
         <h2 id="korszamlalo" style="display: none;"></h2>
@@ -30,8 +30,8 @@
             <div class="csik" id="jobbkep"><span class="szamok" id="emberszamj"> </span></div>
         </div>
                 <div id="cedulak" style="display: none;">
-                    <div class="nevcedula"><label for="kep-bal" id="balgomb" class="ingameGomb" onclick=""></label></div>
-                    <div class="nevcedula"><label for="kep-jobb" id="jobbgomb" class="ingameGomb" onclick=""></label></div>
+                    <div class="nevcedula"><label for="kep-bal" id="balgomb" class="ingameGomb"></label></div>
+                    <div class="nevcedula"><label for="kep-jobb" id="jobbgomb" class="ingameGomb"></label></div>
                 </div>
         <h3 id="next" onclick="JatekC()" style="display: none;">Következő kör</h3>
         <h3 id="jedliknext" onclick="Jatekj()" style="display: none;"></h3>
@@ -41,6 +41,6 @@
     <div id="keretjobb" class="keret"></div>
     <div id="keretalso" class="keret"></div>
     <input type="button" name="elso" value="Kezdőképernyő" id="resigomb" class="ingameGomb" onclick="ujrakezd()">
-    <h4 id="eredmenyszoveg"></h4>
+
 </body>
 </html>
