@@ -154,6 +154,10 @@ table{
     border-radius: 35px;
 }
 
+#pont-szam{
+    text-align: center;
+}
+
 #masikMod{
     height: 20px;
     width: 100%;
