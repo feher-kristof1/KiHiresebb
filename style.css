@@ -134,3 +134,56 @@ table{
 #pont-szam{
     text-align: center;
 }
+
+#masikMod{
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(205, 205, 205);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation-name: kockamaszkal;
+    animation-duration: 400ms;
+    animation-delay: 150ms;
+}
+
+#keretbal{
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(205, 205, 205);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation-name: kockamaszkal;
+    animation-duration: 400ms;
+}
+
+#keretjobb{
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(205, 205, 205);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    animation-name: kockamaszkal;
+    animation-duration: 400ms;
+}
+#keretalso{
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(205, 205, 205);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    animation-name: kockamaszkal;
+    animation-duration: 400ms;
+    animation-delay: 150ms;
+}
