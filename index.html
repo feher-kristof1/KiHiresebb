@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="alapjatek.js" defer></script>
+    <script src="tanarok.js"></script>
     <title>Ki a híresebb?</title>
 </head>
 <body>
@@ -14,41 +15,17 @@
         <p class="hellotext">10 páros után lesz vége a játéknak, ezt jegyezd meg!</p>
         <p class="hellotext">Ha érdekelnek a pontos számok, a képekre kattintva jelenítheted meg őket.</p>
         <div class="modvalasztogomb">
-            <input type="button" name="casual" value="Casual" class="ingameGomb" onclick="jatekKezdC()">
-            <input type="button" name="jedlik" value="Jedlik mód" class="ingameGomb" onclick="jatekKezdJ()">
+            <div id="ingameGomb" onclick="JatekC()"> </div>
         </div>
     </div>
     <div id="jatek-vege" style="display: none;">
         <h1 class="jatekvege" style="font-size: 75px;">Vége a játéknak, nincs több kör.</h1>
-        <h1 class="jatekvege">Az alábbiakban láthatod mekkora celebista vagy a találataid alapján</h1>
-        <table class="jatekvege">
-            <tr>
-                <th>Találatok száma</th>
-                <th>Szint</th>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Profi celebista</td>
-            </tr>
-            <tr>
-                <td>9-8</td>
-                <td>Nem tökéletes, de jó</td>
-            </tr>
-            <tr>
-                <td>7-5</td>
-                <td>Több mint a fele, nem rossz</td>
-            </tr>
-            <tr>
-                <td>4-0</td>
-                <td>Még a fele sem jött öszze? Szégyen!</td>
-            </tr>
-        </table>
     </div>
     <div class="jatekter">
-        <h2 id="korszamlalo"></h2>
+        <h2 id="korszamlalo" style="display: none;"></h2>
         <div class="kepek" style="display: none;">
-            <img src="" alt="" id="kep-bal" class="kepp" onclick="csikanimacio()">
-            <img src="" alt="" id="kep-jobb" class="kepp" onclick="csikanimacio()">
+            <img src="" alt="" id="kep-bal" class="kepp" onclick="animaciok()">
+            <img src="" alt="" id="kep-jobb" class="kepp" onclick="animaciok()">
             <div class="csik" id="balkep"><span class="szamok" id="emberszamb"> </span></div>
             <div class="csik" id="jobbkep"><span class="szamok" id="emberszamj"> </span></div>
         </div>
@@ -58,7 +35,10 @@
                 </div>
         <h3 id="next" onclick="JatekC()" style="display: none;">Következő kör</h3>
     </div>
-
+    <div  id="masikMod" class="keret" onmouseleave="kockamaszkal()"></div>
+    <div id="keretbal" class="keret"></div>
+    <div id="keretjobb" class="keret"></div>
+    <div id="keretalso" class="keret"></div>
     <input type="button" name="elso" value="Kezdőképernyő" id="resigomb" class="ingameGomb" onclick="ujrakezd()">
     <h4 id="eredmenyszoveg"></h4>
 </body>
