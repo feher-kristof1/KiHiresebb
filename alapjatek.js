@@ -7,7 +7,7 @@ let balgomb = document.querySelector("#balgomb");
 let csikb = document.querySelector("#balkep");
 let csikj = document.querySelector("#jobbkep");
 let korok = 1;
-let pontszam = 0;
+let pontszam2 = 0;
 
 console.log(balgomb);
 
