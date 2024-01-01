@@ -95,11 +95,11 @@ document.querySelector("#cedulak").style.display="none";
 
 function JatekC() {
     if (parseInt(emberszam1.replace(/\s/g, '')) > parseInt(emberszam2.replace(/\s/g, ''))) {
-        pontszam++;
-        document.querySelector("#eredmenyszoveg").innerHTML = "Helyes válasz! Pontszám: " + pontszam;
+        pontszam2++;
+        document.querySelector("#eredmenyszoveg").innerHTML = "Helyes válasz! Pontszám: " + pontszam2;
     } else {
-        pontszam--;
-        document.querySelector("#eredmenyszoveg").innerHTML = "Helytelen válasz! Pontszám: " + pontszam;
+        pontszam2--;
+        document.querySelector("#eredmenyszoveg").innerHTML = "Helytelen válasz! Pontszám: " + pontszam2;
     }
 
 
@@ -108,5 +108,5 @@ function JatekC() {
 }
 
 function megtekintPontszam() {
-    alert("A jelenlegi pontszámod: " + pontszam);
+    alert("A jelenlegi pontszámod: " + pontszam2);
 }
