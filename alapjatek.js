@@ -6,10 +6,13 @@ let talaltszamok = ["21 400 000", " 11 300", "7", "3 580 00", "722", "1 080 000"
 let kepeik = ["tanarok/adam.jpd", "tanarok/anikó.jpg", "tanarok/anita.jpg", "tanarok/anna.jfif", "tanarok/banane.jfif", "tanarok/bence.jfif", "tanarok/bókáné.jfif", "tanarok/bolya.jfif", "tanarok/burnoczki.jfif", "tanarok/csajkás.jfif", "tanarok/csóka.jfif", "tanarok/fazakas.jfif", "tanarok/flash.jpg", "tanarok/fortuna.jfif", "tanarok/jusztina.jpg", "tanarok/káldyné.jpg", "tanarok/kollár.jpg", "tanarok/könytáros.jpg", "tanarok/kottra.jpg", "tanarok/kovacsics.jpg", "tanarok/liptak.jpg", "tanarok/modos.jpg", "tanarok/nigel.jpg", "tanarok/nits.jpg", "tanarok/ntf.jpg", "tanarok/osb.jpg", "tanarok/pal.jfif", "tanarok/papplaura.jpg", "tanarok/patterman.jpg", "tanarok/prumüller.jpg", "tanarok/soós.jpg", "tanarok/strider.jpg", "tanarok/striderné.jpg", "tanarok/szarvas.jfif", "tanarok/tolnai.jpg", "tanarok/turbék.jpg", "tanarok/vinzce.jpg"]
 let pic = document.querySelector("#kep-bal");
 let pic1 = document.querySelector("#kep-jobb");
+let jedlikpic = document.querySelector("#jedlikkep-bal");
+let jedlikpic1 = document.querySelector("#jedlikkep-jobb");
 let balgomb = document.querySelector("#balgomb");
 let csikb = document.querySelector("#balkep");
 let csikj = document.querySelector("#jobbkep");
 let kovkorGomb = document.querySelector("#next");
+let kovkorGombj = document.querySelector("#jedliknext");
 let titkoskocka = document.querySelector("#masikMod");
 let keretb=document.querySelector("#keretbal");
 let keretj=document.querySelector("#keretjobb");
@@ -125,22 +128,24 @@ function jatekKezdJ(){
         let kep = kepeik[randomszam1];
         let kep1 = kepeik[randomszam2];
 
-        pic.src = kep;
-        pic.alt = kivEmber1;
-
-        pic1.src = kep1;
-        pic1.alt = kivEmber2;
+        jedlikpic.src = kep;
+        jedlikpic.alt = kivEmber1;
+    
+        jedlikpic1.src = kep1;
+        jedlikpic1.alt = kivEmber2;
 
         document.querySelector("#balgomb").innerHTML=kivEmber1;
         document.querySelector("#jobbgomb").innerHTML=kivEmber2;
         document.querySelector(".kezdokepernyo").style.display="none";
-        document.querySelector("#next").style.display="block";
         document.querySelector("#korszamlalo").innerHTML="Jelenlegi kör: "+korok;
         document.querySelector(".jatekter").style.display="block";
         document.querySelector("#cedulak").style.display="block";
         document.querySelector("#next").style.display="none";
-        pic.style.display="flex";
-        pic1.style.display="flex";
+        document.querySelector("#jedliknext").style.display="none";
+        pic.style.display="none";
+        pic1.style.display="none";
+        jedlikpic.style.display="flex";
+        jedlikpic1.style.display="flex";
         document.querySelector(".kepek").style.display="block";
         document.querySelector("#cedulak").style.display="block";
         csikb.style.display="none"
@@ -161,28 +166,30 @@ function JatekJ(){
     let randomszam2 = Math.floor(Math.random()*emberek.length);
 
     if(randomszam1!=randomszam2){
-        let kivEmber1 = emberek[randomszam1];
-        let kivEmber2 = emberek[randomszam2];
-        let emberszam1 = talalatszamok[randomszam1];
-        let emberszam2 = talalatszamok[randomszam2]; 
-        let kep = kepek[randomszam1];
-        let kep1 = kepek[randomszam2];
+        let kivEmber1 = tanarok[randomszam1];
+        let kivEmber2 = tanarok[randomszam2];
+        let emberszam1 = talaltszamok[randomszam1];
+        let emberszam2 = talaltszamok[randomszam2]; 
+        let kep = kepeik[randomszam1];
+        let kep1 = kepeik[randomszam2];
     
-        pic.src = kep;
-        pic.alt = kivEmber1;
+        jedlikpic.src = kep;
+        jedlikpic.alt = kivEmber1;
     
-        pic1.src = kep1;
-        pic1.alt = kivEmber2;
+        jedlikpic1.src = kep1;
+        jedlikpic1.alt = kivEmber2;
         document.querySelector("#balgomb").innerHTML=kivEmber1;
         document.querySelector("#jobbgomb").innerHTML=kivEmber2;
         document.querySelector(".kezdokepernyo").style.display="none";
-        document.querySelector("#next").style.display="block";
         document.querySelector("#korszamlalo").innerHTML="Jelenlegi kör: "+korok;
         document.querySelector(".jatekter").style.display="block";
         document.querySelector("#cedulak").style.display="block";
         document.querySelector("#next").style.display="none";
-        pic.style.display="flex";
-        pic1.style.display="flex";
+        document.querySelector("#jedliknext").style.display="none";
+        pic.style.display="none";
+        pic1.style.display="none";
+        jedlikpic.style.display="flex";
+        jedlikpic1.style.display="flex";
         document.querySelector(".kepek").style.display="block";
         document.querySelector("#cedulak").style.display="block";
         csikb.style.display="none"
@@ -222,6 +229,19 @@ function animaciok(){
     kovkorGomb.style.animationName= "gombok";
     kovkorGomb.style.animationDuration="3s";
     kovkorGomb.style.display="block";
+    console.log(3);
+}
+
+function animaciokj(){
+    csikb.style.animationName= "csik";
+    csikb.style.animationDuration="4s";
+    csikb.style.display="block"
+    csikj.style.animationName= "csik";
+    csikj.style.animationDuration="4s";
+    csikj.style.display="block"
+    kovkorGombj.style.animationName= "gombok";
+    kovkorGombj.style.animationDuration="3s";
+    kovkorGombj.style.display="block";
     console.log(3);
 }
 
