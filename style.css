@@ -68,6 +68,14 @@ p.hellotext{
     float: right;
 }
 
+#jedlikkep-jobb{
+    float: right;
+}
+
+#jedlikkep-bal{
+    float: left;
+}
+
 #next{
     height: 40px;
     margin-left: 425px;
