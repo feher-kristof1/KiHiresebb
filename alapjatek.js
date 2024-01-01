@@ -7,6 +7,10 @@ let balgomb = document.querySelector("#balgomb");
 let csikb = document.querySelector("#balkep");
 let csikj = document.querySelector("#jobbkep");
 let kovkorGomb = document.querySelector("#next");
+let titkoskocka = document.querySelector("#masikMod");
+let keretb=document.querySelector("#keretbal");
+let keretj=document.querySelector("#keretjobb");
+let keretalso=document.querySelector("#keretalso");
 let korok = 1;
 
 console.log(balgomb);
@@ -92,4 +96,23 @@ function jatekVege(){
     document.querySelector("#next").style.display="none";
     document.querySelector(".kepek").style.display="none";
     document.querySelector("#cedulak").style.display="none";
+}
+
+function kockamaszkal(){
+    titkoskocka.style.animationName="kockamaszkal";
+    titkoskocka.style.animationDuration="2s";
+    titkoskocka.style.animationIterationCount="infinite";
+    titkoskocka.style.animationTimingFunction= "linear";
+    keretb.style.animationName="kockamaszkal";
+    keretb.style.animationDuration="2s";
+    keretb.style.animationIterationCount="infinite";
+    keretb.style.animationTimingFunction= "linear";
+    keretj.style.animationName="kockamaszkal";
+    keretj.style.animationDuration="2s";
+    keretj.style.animationIterationCount="infinite";
+    keretj.style.animationTimingFunction= "linear";
+    keretalso.style.animationName="kockamaszkal";
+    keretalso.style.animationDuration="2s";
+    keretalso.style.animationIterationCount="infinite";
+    keretalso.style.animationTimingFunction= "linear";
 }

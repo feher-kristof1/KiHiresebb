@@ -48,14 +48,10 @@ p.hellotext{
 
 #ingameGomb{
     margin: auto;
-    margin-left: 600px;
+    margin-left: 595px;
     background-image: url('kepek/start.png');
     width: 275px;
     height: 225px;
-}
-
-#resigomb{
-    margin-left: 435px;
 }
 
 .kepp{
@@ -116,6 +112,18 @@ p.hellotext{
     to {height: 40px; color: white;}
 }
 
+@keyframes kockamaszkal{
+    0% {background-color: white;}
+    50% {background-color: darkblue;}
+    100% {background-color: white;}
+}
+
+@keyframes keret{
+    0% {background-color: white;}
+    50% {background-color: red;}
+    100% {background-color: rgb(125, 10, 30);}
+}
+
 .csik{
     height: 25px;
     text-align: center;
@@ -148,9 +156,53 @@ table{
 
 #masikMod{
     height: 20px;
-    width: 10px;
+    width: 100%;
     position: absolute;
-    left: 0;
     top: 0;
-    background-color: rgb(237, 237, 237);;
+    left: 0;
+    background-color: rgb(205, 205, 205);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation-name: kockamaszkal;
+    animation-duration: 400ms;
+    animation-delay: 150ms;
+}
+
+#keretbal{
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(205, 205, 205);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation-name: kockamaszkal;
+    animation-duration: 400ms;
+}
+
+#keretjobb{
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(205, 205, 205);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    animation-name: kockamaszkal;
+    animation-duration: 400ms;
+}
+#keretalso{
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(205, 205, 205);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    animation-name: kockamaszkal;
+    animation-duration: 400ms;
+    animation-delay: 150ms;
 }
