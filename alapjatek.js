@@ -7,6 +7,7 @@ let balgomb = document.querySelector("#balgomb");
 let csikb = document.querySelector("#balkep");
 let csikj = document.querySelector("#jobbkep");
 let korok = 1;
+let pontszam = 0;
 
 console.log(balgomb);
 
@@ -92,6 +93,13 @@ function JatekC(){
             korok=1;
             jatekVege()
         }
+        if (parseInt(emberszam1.replace(/\s/g, '')) > parseInt(emberszam2.replace(/\s/g, ''))) {
+            pontszam++;
+            document.querySelector("#eredmenyszoveg").innerHTML = "Helyes válasz! Pontszám: " + pontszam;
+        } else {
+            pontszam--;
+            document.querySelector("#eredmenyszoveg").innerHTML = "Helytelen válasz! Pontszám: " + pontszam;
+        }
     }
     else randomszam2 = Math.floor(Math.random()*emberek.length);
 }
@@ -103,14 +111,16 @@ function CsikAllit(szam1,szam2){;
     console.log(1)
 }
 
-function csikanimacio(){
+function animaciok(){
     csikb.style.animationName= "csik";
     csikb.style.animationDuration="4s";
     csikb.style.display="block"
     csikj.style.animationName= "csik";
     csikj.style.animationDuration="4s";
     csikj.style.display="block"
-
+    kovkorGomb.style.animationName= "gombok";
+    kovkorGomb.style.animationDuration="3s";
+    kovkorGomb.style.display="block";
     console.log(3);
 }
 
@@ -123,6 +133,7 @@ function ujrakezd(){
     document.querySelector("#cedulak").style.display="none";
     document.querySelector("#jatek-vege").style.display="none";
     korok=1;
+    pontszam=0;
 }
 
 function jatekVege(){
@@ -132,4 +143,8 @@ function jatekVege(){
     document.querySelector("#next").style.display="none";
     document.querySelector(".kepek").style.display="none";
     document.querySelector("#cedulak").style.display="none";
+}
+
+function megtekintPontszam() {
+    alert("A jelenlegi pontszámod: " + pontszam);
 }
