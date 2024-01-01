@@ -81,6 +81,19 @@ p.hellotext{
     color: white;
 }
 
+#jedliknext{
+    height: 40px;
+    margin-left: 425px;
+    text-align: center;
+    width: 200px;
+    margin:auto;
+    border: 5px solid rgb(103, 5, 2);
+    border-radius: 10px;
+    font-size: larger;
+    background-color: rgba(103, 5, 2, 0.65);
+    color: white;
+}
+
 .nevcedula{
     height: 40px;
     text-align: center;
