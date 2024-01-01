@@ -6,55 +6,14 @@ let pic1 = document.querySelector("#kep-jobb");
 let balgomb = document.querySelector("#balgomb");
 let csikb = document.querySelector("#balkep");
 let csikj = document.querySelector("#jobbkep");
+let kovkorGomb = document.querySelector("#next");
+let titkoskocka = document.querySelector("#masikMod");
+let keretb=document.querySelector("#keretbal");
+let keretj=document.querySelector("#keretjobb");
+let keretalso=document.querySelector("#keretalso");
 let korok = 1;
-let pontszam2 = 0;
 
 console.log(balgomb);
-
-
-function jatekKezdC(){
-    let randomszam1 = Math.floor(Math.random()*emberek.length);
-    let randomszam2 = Math.floor(Math.random()*emberek.length);
-
-    if(randomszam1!=randomszam2){
-        let kivEmber1 = emberek[randomszam1];
-        let kivEmber2 = emberek[randomszam2];
-        let emberszam1 = talalatszamok[randomszam1];
-        let emberszam2 = talalatszamok[randomszam2]; 
-        let kep = kepek[randomszam1];
-        let kep1 = kepek[randomszam2];
-        console.log("bal "+ emberszam1);
-        console.log("jobb "+ emberszam2);
-
-        pic.src = kep;
-        pic.alt = kivEmber1;
-
-        pic1.src = kep1;
-        pic1.alt = kivEmber2;
-
-        document.querySelector("#balgomb").innerHTML=kivEmber1;
-        document.querySelector("#jobbgomb").innerHTML=kivEmber2;
-        document.querySelector(".kezdokepernyo").style.display="none";
-        document.querySelector("#next").style.display="block";
-        document.querySelector("#korszamlalo").innerHTML="Jelenlegi kör: "+korok;
-        document.querySelector(".jatekter").style.display="block";
-        document.querySelector("#cedulak").style.display="block";
-        pic.style.display="flex";
-        pic1.style.display="flex";
-        document.querySelector(".kepek").style.display="block";
-        document.querySelector("#cedulak").style.display="block";
-        csikb.style.display="none"
-        csikj.style.display="none"
-
-        CsikAllit(emberszam1,emberszam2);
-        korok++;
-        if(korok>11){ 
-            korok=1;
-            jatekVege()
-        }
-    }
-    else randomszam2 = Math.floor(Math.random()*emberek.length);
-}
 
 function JatekC(){
     let randomszam1 = Math.floor(Math.random()*emberek.length);
@@ -75,19 +34,21 @@ function JatekC(){
         pic1.alt = kivEmber2;
         document.querySelector("#balgomb").innerHTML=kivEmber1;
         document.querySelector("#jobbgomb").innerHTML=kivEmber2;
-        document.querySelector(".kezdokepernyo").style.display="none";
-        document.querySelector("#next").style.display="block";
         document.querySelector("#korszamlalo").innerHTML="Jelenlegi kör: "+korok;
+        document.querySelector(".kezdokepernyo").style.display="none";
+        document.querySelector("#next").style.display="none";
         document.querySelector(".jatekter").style.display="block";
-        document.querySelector("#cedulak").style.display="block";
-        pic.style.display="flex";
-        pic1.style.display="flex";
+        document.querySelector("#korszamlalo").style.display="block";
         document.querySelector(".kepek").style.display="block";
         document.querySelector("#cedulak").style.display="block";
-        csikb.style.display="none"
-        csikj.style.display="none"
+        
+        csikb.style.display="none";
+        csikj.style.display="none";
+        pic.style.display="flex";
+        pic1.style.display="flex";
 
         CsikAllit(emberszam1,emberszam2);
+
         korok++;
         if(korok>11){ 
             korok=1;
@@ -104,14 +65,16 @@ function CsikAllit(szam1,szam2){;
     console.log(1)
 }
 
-function csikanimacio(){
+function animaciok(){
     csikb.style.animationName= "csik";
     csikb.style.animationDuration="4s";
     csikb.style.display="block"
     csikj.style.animationName= "csik";
     csikj.style.animationDuration="4s";
     csikj.style.display="block"
-
+    kovkorGomb.style.animationName= "gombok";
+    kovkorGomb.style.animationDuration="3s";
+    kovkorGomb.style.display="block";
     console.log(3);
 }
 
@@ -135,20 +98,21 @@ function jatekVege(){
     document.querySelector("#cedulak").style.display="none";
 }
 
-function JatekC() {
-    if (parseInt(emberszam1.replace(/\s/g, '')) > parseInt(emberszam2.replace(/\s/g, ''))) {
-        pontszam2++;
-        document.querySelector("#eredmenyszoveg").innerHTML = "Helyes válasz! Pontszám: " + pontszam2;
-    } else {
-        pontszam2--;
-        document.querySelector("#eredmenyszoveg").innerHTML = "Helytelen válasz! Pontszám: " + pontszam2;
-    }
-
-
-
-    jatekKezdC();
-}
-
-function megtekintPontszam() {
-    alert("A jelenlegi pontszámod: " + pontszam2);
+function kockamaszkal(){
+    titkoskocka.style.animationName="kockamaszkal";
+    titkoskocka.style.animationDuration="2s";
+    titkoskocka.style.animationIterationCount="infinite";
+    titkoskocka.style.animationTimingFunction= "linear";
+    keretb.style.animationName="kockamaszkal";
+    keretb.style.animationDuration="2s";
+    keretb.style.animationIterationCount="infinite";
+    keretb.style.animationTimingFunction= "linear";
+    keretj.style.animationName="kockamaszkal";
+    keretj.style.animationDuration="2s";
+    keretj.style.animationIterationCount="infinite";
+    keretj.style.animationTimingFunction= "linear";
+    keretalso.style.animationName="kockamaszkal";
+    keretalso.style.animationDuration="2s";
+    keretalso.style.animationIterationCount="infinite";
+    keretalso.style.animationTimingFunction= "linear";
 }
