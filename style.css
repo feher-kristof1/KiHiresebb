@@ -1,6 +1,6 @@
 body{
     width: 75%;
-    background-color: rgb(217, 217, 217);
+    background-color: white;
     margin: 0 auto;
 }
 
@@ -22,6 +22,7 @@ h2{
     width: 400px;
     margin: 200px auto 10px;
     border: 3px solid rgb(160, 15, 15);
+    background-color: rgb(217, 217, 217);
     border-radius: 20px;
     display: block;
 }
@@ -45,6 +46,14 @@ p.hellotext{
     margin:auto;
 }
 
+#ingameGomb{
+    margin: auto;
+    margin-left: 600px;
+    background-image: url('kepek/start.png');
+    width: 275px;
+    height: 225px;
+}
+
 #resigomb{
     margin-left: 435px;
 }
@@ -64,15 +73,15 @@ p.hellotext{
 }
 
 #next{
-    height: 35px;
+    height: 40px;
     margin-left: 425px;
     text-align: center;
     width: 200px;
     margin:auto;
-    border: 5px solid rgb(124, 160, 15);
+    border: 5px solid rgb(103, 5, 2);
     border-radius: 10px;
     font-size: larger;
-    background-color: rgba(124, 160, 15, 0.65);
+    background-color: rgba(103, 5, 2, 0.65);
     color: white;
 }
 
@@ -82,10 +91,10 @@ p.hellotext{
     width: 200px;
     margin: auto;
     margin-bottom: 10px;
-    border: 5px solid rgb(15, 15, 160);
+    border: 5px solid rgb(160, 20, 15);
     border-radius: 10px;
     font-size: larger;
-    background-color: rgba(15, 15, 160, 0.65);
+    background-color: rgba(160, 20, 15, 0.65);
     color: white;
 }
 
@@ -98,15 +107,21 @@ p.hellotext{
 }
 
 @keyframes csik{
-    from {width: 0px;}
-    to {width: 1027.5px;}
+    from {width: 0px; color:rgb(75, 75, 75);}
+    to {width: 890px; color: azure;}
+}
+
+@keyframes gombok{
+    from {height: 0px; color: rgb(160, 20, 15);}
+    to {height: 40px; color: white;}
 }
 
 .csik{
     height: 25px;
     text-align: center;
-    width: 1027.5px;
+    width: 890px;
     margin-left:250px;
+    margin-bottom: 1px;
     background-color: rgb(75, 75, 75);
     border: 5px double rgb(0, 0, 0);
     color: azure;
@@ -129,4 +144,13 @@ table{
     border: 5px dotted rgb(3, 49, 198);
     background-color: rgba(3, 48, 198, 0.65);
     border-radius: 35px;
+}
+
+#masikMod{
+    height: 20px;
+    width: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(237, 237, 237);;
 }
