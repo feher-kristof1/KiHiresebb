@@ -155,19 +155,19 @@ function jatekVege(){
 
 function kockamaszkal(){
     titkoskocka.style.animationName="kockamaszkal";
-    titkoskocka.style.animationDuration="2s";
+    titkoskocka.style.animationDuration="2500ms";
     titkoskocka.style.animationIterationCount="infinite";
     titkoskocka.style.animationTimingFunction= "linear";
     keretb.style.animationName="kockamaszkal";
-    keretb.style.animationDuration="2s";
+    keretb.style.animationDuration="2500ms";
     keretb.style.animationIterationCount="infinite";
     keretb.style.animationTimingFunction= "linear";
     keretj.style.animationName="kockamaszkal";
-    keretj.style.animationDuration="2s";
+    keretj.style.animationDuration="2500ms";
     keretj.style.animationIterationCount="infinite";
     keretj.style.animationTimingFunction= "linear";
     keretalso.style.animationName="kockamaszkal";
-    keretalso.style.animationDuration="2s";
+    keretalso.style.animationDuration="2500ms";
     keretalso.style.animationIterationCount="infinite";
     keretalso.style.animationTimingFunction= "linear";
 }
