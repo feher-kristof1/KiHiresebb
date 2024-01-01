@@ -145,6 +145,20 @@ function jatekVege(){
     document.querySelector("#cedulak").style.display="none";
 }
 
+function JatekC() {
+    if (parseInt(emberszam1.replace(/\s/g, '')) > parseInt(emberszam2.replace(/\s/g, ''))) {
+        pontszam2++;
+        document.querySelector("#eredmenyszoveg").innerHTML = "Helyes válasz! Pontszám: " + pontszam2;
+    } else {
+        pontszam2--;
+        document.querySelector("#eredmenyszoveg").innerHTML = "Helytelen válasz! Pontszám: " + pontszam2;
+    }
+
+
+
+    jatekKezdC();
+}
+
 function megtekintPontszam() {
-    alert("A jelenlegi pontszámod: " + pontszam);
+    alert("A jelenlegi pontszámod: " + pontszam2);
 }
